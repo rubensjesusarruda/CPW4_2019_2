@@ -1,0 +1,14 @@
+-Lista de Compras
+
+instalar dependencia
+npm i -D node-sass
+
+
+DENTRO DA SRC CRIAR AS FOLDES
+
+-COMPONENTS 
+-SERVICES
+-IMG
+-FONTS
+
+npm i -S react-router-dom

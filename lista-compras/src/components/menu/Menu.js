@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { tsPropertySignature } from '@babel/types';
 import {Link} from 'react-router-dom';
 
 import './Menu.scss';

@@ -1,16 +1,25 @@
-export default class ListaService{
-    constructor(){
-        this.listas =[];
+import axios from 'axios';
 
+export default class ListaService {
+
+    constructor() {
+        this.listas = [];
+        this.api = axios.create({
+            baseURL: 'https://secret-plateau-95576.herokuapp.com/listas'
+        });
     }
-   async recuperarListas(){
-    let requisicao =
-         await fetch('http://localhost:3001/listas');
-       let dados = await requisicao.json();
-       this.listas = dados;
-    
 
+    async recuperarListas() {
+        let resposta = await this.api.get('/');
+        this.listas = resposta.data;
         return this.listas;
     }
+
+    async salvar(lista){
+        let resposta = await this.api.post('/',lista);
+        console.log(resposta);
+
+    }
 }
+
 

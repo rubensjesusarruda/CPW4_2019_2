@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
-import Menu from '../menu/Menu';
+import Menu from '../../components/menu/Menu';
 import icone from '../../img/paginaAnterior.png';
 
 import ListaService from '../../services/ListaService';
+
+import ROTAS from '../../constants/rotas';
 
 export default class CriarLista extends Component {
 
@@ -25,7 +27,7 @@ export default class CriarLista extends Component {
         /**
          * Faz o encaminhamento para a pagina inicial do app
          */
-        this.props.history.push('/');
+        this.props.history.push(ROTAS.INICIO);
     }
 
     render() {
